@@ -21,18 +21,21 @@ const Dashboard = () => {
   const [selectedOrderTimeStamps, setSelectedOrderTimeStamps] = useState({});
 
   //combining timestamps and mockdata to display oderSubmitted column in table
-  timestamps.results.forEach((timestamp) => { 
+  timestamps.results.forEach((timestamp) => {
     mockData.results.forEach((order) => {
       if (timestamp["&id"] === order["&id"]) {
-        Object.assign(order, timestamp.timestamps);
+        Object.assign(order, timestamp);
       }
-    })
-  })
+    });
+  });
 
   return (
     <div>
       <div className={styles.header}>
-        <HeaderTitle primaryTitle="Orders" secondaryTitle={mockData.results.length} />
+        <HeaderTitle
+          primaryTitle="Orders"
+          secondaryTitle={mockData.results.length}
+        />
         <div className={styles.actionBox}>
           <Search
             value={searchText}
@@ -56,7 +59,13 @@ const Dashboard = () => {
             title="Selected Order Timestamps"
           />
         </div>
-        <List rows={mockData.results} currencyType={currency} />
+        <List
+          rows={mockData.results}
+          currencyType={currency}
+          searchText={searchText}
+          setSelectedOrderDetails={setSelectedOrderDetails}
+          setSelectedOrderTimeStamps={setSelectedOrderTimeStamps}
+        />
       </div>
     </div>
   );
