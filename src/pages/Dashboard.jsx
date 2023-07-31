@@ -20,6 +20,15 @@ const Dashboard = () => {
   const [selectedOrderDetails, setSelectedOrderDetails] = useState({});
   const [selectedOrderTimeStamps, setSelectedOrderTimeStamps] = useState({});
 
+  //combining timestamps and mockdata to display oderSubmitted column in table
+  timestamps.results.forEach((timestamp) => { 
+    mockData.results.forEach((order) => {
+      if (timestamp["&id"] === order["&id"]) {
+        Object.assign(order, timestamp.timestamps);
+      }
+    })
+  })
+
   return (
     <div>
       <div className={styles.header}>
