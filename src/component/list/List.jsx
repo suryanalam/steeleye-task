@@ -25,7 +25,7 @@ const List = ({
           <ListHeaderCell>Buy/Sell</ListHeaderCell>
           <ListHeaderCell>Country</ListHeaderCell>
           <ListHeaderCell>Order Submitted</ListHeaderCell>
-          <ListHeaderCell>Order Volume / USD</ListHeaderCell>
+          <ListHeaderCell>Order Volume / {currencyType}</ListHeaderCell>
         </ListHeader>
       </thead>
       <tbody>
