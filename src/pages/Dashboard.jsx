@@ -7,7 +7,7 @@ import timestamps from "../assets/timeStamps.json";
 // Components
 import Dropdown from "../component/dropdown/Dropdown";
 import HeaderTitle from "../component/header-title/HeaderTitle";
-import Search from "../component/search/Search";
+import {Search} from "../stories/search/Search";
 import List from "../component/list/List";
 
 // Styles
@@ -34,10 +34,12 @@ const Dashboard = () => {
       <div className={styles.header}>
         <HeaderTitle
           primaryTitle="Orders"
-          secondaryTitle={mockData.results.length}
+          secondaryTitle={`${mockData.results.length} orders`}
         />
         <div className={styles.actionBox}>
           <Search
+            variant={'dark'} 
+            size={'medium'}
             value={searchText}
             onChange={(e) => setSearchText(e.target.value)}
           />

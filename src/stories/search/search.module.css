@@ -1,0 +1,33 @@
+.searchInput{
+    outline:0;
+    height:15px;
+    border:2px solid;
+    border-radius: 2rem;
+    color: #fff;
+    padding:0.5rem 1rem;
+}
+
+.dark{
+    border-color: #ffb65e;
+    background-color:#043463 ;
+}
+
+.light{
+    border-color:#b8c7d6;
+    background-color: transparent;
+}
+
+.small{
+    width:150px;
+    font-size: 12px;
+}
+
+.medium{
+    width:200px;
+    font-size: 14px;
+}
+
+.large{
+    width:250px;
+    font-size: 16px;
+}

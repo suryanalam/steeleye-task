@@ -16,7 +16,7 @@
 .content {
   display: flex;
   flex-direction: column;
-  background-color: rgb(184, 199, 214);
+  background-color: #b8c7d6;
   gap: 1em;
   margin: 1em;
 }
